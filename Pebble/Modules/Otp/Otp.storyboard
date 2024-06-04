@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Satoshi-Variable.ttf">
+            <string>SatoshiVariable-Bold_Bold</string>
+            <string>SatoshiVariable-Bold_Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Otp View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="OtpViewController" id="Y6W-OH-hqX" customClass="OtpViewController" customModule="Pebble" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter code sent to your phone" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ubT-hQ-ZXm">
+                                <rect key="frame" x="24" y="108" width="366" height="80"/>
+                                <fontDescription key="fontDescription" name="SatoshiVariable-Bold_Bold" family="Satoshi Variable" pointSize="32"/>
+                                <color key="textColor" red="0.066666666669999999" green="0.094117647060000004" blue="0.1529411765" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="we sent it to the number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e3s-ld-0q0">
+                                <rect key="frame" x="24" y="204" width="170.5" height="20"/>
+                                <fontDescription key="fontDescription" name="SatoshiVariable-Bold_Regular" family="Satoshi Variable" pointSize="16"/>
+                                <color key="textColor" red="0.38823529410000002" green="0.39607843139999999" blue="0.45098039220000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="+971 557 33* ***" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dC2-6P-WCD">
+                                <rect key="frame" x="202.5" y="204" width="187.5" height="20"/>
+                                <fontDescription key="fontDescription" name="SatoshiVariable-Bold_Regular" family="Satoshi Variable" pointSize="16"/>
+                                <color key="textColor" red="0.066666666669999999" green="0.094117647060000004" blue="0.1529411765" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Confirm number" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KnO-4S-ujp">
+                                <rect key="frame" x="24" y="254" width="366" height="20"/>
+                                <fontDescription key="fontDescription" name="SatoshiVariable-Bold_Regular" family="Satoshi Variable" pointSize="16"/>
+                                <color key="textColor" red="0.066666666669999999" green="0.094117647060000004" blue="0.1529411765" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CXQ-c9-bwH" customClass="SVPinView" customModule="SVPinView">
+                                <rect key="frame" x="24" y="284" width="366" height="56"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="rWc-nA-MXH"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="pinLength">
+                                        <integer key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                        <color key="value" red="0.066666666669999999" green="0.094117647060000004" blue="0.1529411765" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="interSpace">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderLineColor">
+                                        <color key="value" red="0.38823529410000002" green="0.39607843139999999" blue="0.45098039220000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="activeBorderLineColor">
+                                        <color key="value" red="0.066666666669999999" green="0.094117647060000004" blue="0.1529411765" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderLineThickness">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="activeBorderLineThickness">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="fieldCornerRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="activeFieldCornerRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="pinField:" destination="fJi-uc-bOF" eventType="valueChanged" id="hlj-bC-Mzc"/>
+                                </connections>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="seX-3i-r02">
+                                <rect key="frame" x="24" y="350" width="247.5" height="72"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="IRF-qU-AiO">
+                                        <rect key="frame" x="0.0" y="0.0" width="247.5" height="20"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Resend verification code in" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VOD-cA-2wY">
+                                                <rect key="frame" x="0.0" y="0.0" width="189" height="20"/>
+                                                <fontDescription key="fontDescription" name="SatoshiVariable-Bold_Regular" family="Satoshi Variable" pointSize="16"/>
+                                                <color key="textColor" red="0.38823529410000002" green="0.39607843139999999" blue="0.45098039220000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GCy-M4-mvQ">
+                                                <rect key="frame" x="197" y="0.0" width="50.5" height="20"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="25 sec." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Pv-ZB-VE0">
+                                                        <rect key="frame" x="0.0" y="0.0" width="50.5" height="20"/>
+                                                        <fontDescription key="fontDescription" name="SatoshiVariable-Bold_Regular" family="Satoshi Variable" pointSize="16"/>
+                                                        <color key="textColor" red="0.066666666669999999" green="0.094117647060000004" blue="0.1529411765" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ANN-Nh-ufg">
+                                        <rect key="frame" x="0.0" y="20" width="224.5" height="32"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Didn’t receive it?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O0r-Go-5WU">
+                                                <rect key="frame" x="0.0" y="0.0" width="116.5" height="32"/>
+                                                <fontDescription key="fontDescription" name="SatoshiVariable-Bold_Regular" family="Satoshi Variable" pointSize="16"/>
+                                                <color key="textColor" red="0.38823529410000002" green="0.39607843139999999" blue="0.45098039220000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vGS-bp-5Af">
+                                                <rect key="frame" x="124.5" y="0.0" width="100" height="32"/>
+                                                <fontDescription key="fontDescription" name="SatoshiVariable-Bold_Bold" family="Satoshi Variable" pointSize="16"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Resend Code">
+                                                    <color key="titleColor" red="0.1137254902" green="0.1137254902" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="resendAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="hev-ul-6hh"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="we sent it to the number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="voo-1W-xUL">
+                                        <rect key="frame" x="0.0" y="52" width="170.5" height="20"/>
+                                        <fontDescription key="fontDescription" name="SatoshiVariable-Bold_Regular" family="Satoshi Variable" pointSize="16"/>
+                                        <color key="textColor" systemColor="systemPinkColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RzP-14-c0f">
+                                <rect key="frame" x="24" y="766" width="366" height="56"/>
+                                <color key="backgroundColor" red="0.066666666669999999" green="0.094117647060000004" blue="0.1529411765" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="GoY-2B-whX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SatoshiVariable-Bold_Bold" family="Satoshi Variable" pointSize="18"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Enter"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BsP-id-Grw">
+                                <rect key="frame" x="14" y="64" width="76" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="aKu-51-OnR"/>
+                                </constraints>
+                                <color key="tintColor" red="0.1137254902" green="0.1137254902" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="back" title="Back" imagePadding="9">
+                                    <fontDescription key="titleFontDescription" name="SatoshiVariable-Bold_Bold" family="Satoshi Variable" pointSize="16"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="backAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="DUp-zV-CC9"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="e3s-ld-0q0" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="4gv-Ix-U8S"/>
+                            <constraint firstItem="CXQ-c9-bwH" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="56h-Ul-yE5"/>
+                            <constraint firstItem="ubT-hQ-ZXm" firstAttribute="top" secondItem="BsP-id-Grw" secondAttribute="bottom" constant="20" id="5NH-yV-nDk"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="KnO-4S-ujp" secondAttribute="trailing" constant="24" id="6n1-3P-Ijq"/>
+                            <constraint firstItem="seX-3i-r02" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="Dg1-sd-0Vh"/>
+                            <constraint firstItem="dC2-6P-WCD" firstAttribute="centerY" secondItem="e3s-ld-0q0" secondAttribute="centerY" id="EcY-nf-wZl"/>
+                            <constraint firstItem="CXQ-c9-bwH" firstAttribute="top" secondItem="KnO-4S-ujp" secondAttribute="bottom" constant="10" id="Eoi-CF-K1G"/>
+                            <constraint firstItem="RzP-14-c0f" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="KPP-Kh-1qM"/>
+                            <constraint firstItem="ubT-hQ-ZXm" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="N2t-jE-rOS"/>
+                            <constraint firstItem="BsP-id-Grw" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="14" id="UAx-LF-nul"/>
+                            <constraint firstItem="BsP-id-Grw" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="bAk-7N-mFD"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="RzP-14-c0f" secondAttribute="trailing" constant="24" id="cpi-Li-cLQ"/>
+                            <constraint firstItem="dC2-6P-WCD" firstAttribute="leading" secondItem="e3s-ld-0q0" secondAttribute="trailing" constant="8" id="dhl-Z4-mNC"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ubT-hQ-ZXm" secondAttribute="trailing" constant="24" id="fHT-Nx-Vxf"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="CXQ-c9-bwH" secondAttribute="trailing" constant="24" id="hwJ-yl-TdR"/>
+                            <constraint firstItem="KnO-4S-ujp" firstAttribute="top" secondItem="e3s-ld-0q0" secondAttribute="bottom" constant="30" id="jEs-ff-HmW"/>
+                            <constraint firstItem="seX-3i-r02" firstAttribute="top" secondItem="CXQ-c9-bwH" secondAttribute="bottom" constant="10" id="lc4-Ep-AYy"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="dC2-6P-WCD" secondAttribute="trailing" constant="24" id="mTw-tE-gtB"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="RzP-14-c0f" secondAttribute="bottom" constant="40" id="oa7-j7-Ftb"/>
+                            <constraint firstItem="KnO-4S-ujp" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="u7T-82-h9z"/>
+                            <constraint firstItem="e3s-ld-0q0" firstAttribute="top" secondItem="ubT-hQ-ZXm" secondAttribute="bottom" constant="16" id="uJt-rR-6fO"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backBtn" destination="BsP-id-Grw" id="bwZ-dg-N6E"/>
+                        <outlet property="confirmTitle" destination="KnO-4S-ujp" id="15z-73-bGJ"/>
+                        <outlet property="enterBtn" destination="RzP-14-c0f" id="OTd-cc-hQb"/>
+                        <outlet property="enterTitle" destination="ubT-hQ-ZXm" id="Xti-aP-XiR"/>
+                        <outlet property="errorLabel" destination="voo-1W-xUL" id="be1-3x-bsV"/>
+                        <outlet property="phone" destination="dC2-6P-WCD" id="4Cg-7L-2i2"/>
+                        <outlet property="pinField" destination="CXQ-c9-bwH" id="unn-II-Dbc"/>
+                        <outlet property="resendBtn" destination="vGS-bp-5Af" id="NeI-PH-I3w"/>
+                        <outlet property="resendStack" destination="ANN-Nh-ufg" id="fnK-ot-C1v"/>
+                        <outlet property="timerLabel" destination="4Pv-ZB-VE0" id="PhR-Ng-r9V"/>
+                        <outlet property="timerStack" destination="IRF-qU-AiO" id="HhI-eA-JmO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="fJi-uc-bOF" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="90" y="82"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="back" width="6" height="10"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

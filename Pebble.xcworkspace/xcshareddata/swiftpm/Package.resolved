@@ -1,0 +1,32 @@
+{
+  "pins" : [
+    {
+      "identity" : "onesignal-xcframework",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/OneSignal/OneSignal-XCFramework",
+      "state" : {
+        "revision" : "5016b3aee6e08e9a8e55b2197e60a40ee3d3ebe5",
+        "version" : "3.11.2"
+      }
+    },
+    {
+      "identity" : "qrcode#swift-qrcode-generator",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/dagronf/QRCode#swift-qrcode-generator",
+      "state" : {
+        "branch" : "main",
+        "revision" : "c27f7c3617c50ac8a4601a3cfefb346d777df5ca"
+      }
+    },
+    {
+      "identity" : "swift-qrcode-generator",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/dagronf/swift-qrcode-generator",
+      "state" : {
+        "revision" : "5ca09b6a2ad190f94aa3d6ddef45b187f8c0343b",
+        "version" : "1.0.3"
+      }
+    }
+  ],
+  "version" : 2
+}

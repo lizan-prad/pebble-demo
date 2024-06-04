@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Satoshi-Variable.ttf">
+            <string>SatoshiVariable-Bold_Bold</string>
+            <string>SatoshiVariable-Bold_Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Choose Primary Token View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="ChoosePrimaryTokenViewController" modalTransitionStyle="crossDissolve" modalPresentationStyle="overFullScreen" id="Y6W-OH-hqX" customClass="ChoosePrimaryTokenViewController" customModule="Pebble" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="igP-TJ-Htn">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nza-kq-fa8">
+                                <rect key="frame" x="0.0" y="673.5" width="414" height="222.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose primary token" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sxr-08-GiY">
+                                        <rect key="frame" x="114" y="17" width="186" height="22.5"/>
+                                        <fontDescription key="fontDescription" name="SatoshiVariable-Bold_Bold" family="Satoshi Variable" pointSize="18"/>
+                                        <color key="textColor" red="0.1137254902" green="0.1137254902" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cpn-2k-cT8">
+                                        <rect key="frame" x="189" y="5" width="36" height="4"/>
+                                        <color key="backgroundColor" red="0.86274509799999999" green="0.86274509799999999" blue="0.86274509799999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="4" id="UX0-jV-jNk"/>
+                                            <constraint firstAttribute="width" constant="36" id="yGi-E5-ybP"/>
+                                        </constraints>
+                                    </view>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="IHS-5o-J57">
+                                        <rect key="frame" x="0.0" y="122.5" width="414" height="100"/>
+                                        <color key="backgroundColor" red="0.94509803920000002" green="0.94509803920000002" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="MtG-Ki-gva"/>
+                                        </constraints>
+                                    </tableView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The primary token will use for every transaction by default, but you could still change it manually." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pnp-VQ-Nxy">
+                                        <rect key="frame" x="24" y="47.5" width="366" height="35"/>
+                                        <fontDescription key="fontDescription" name="SatoshiVariable-Bold_Regular" family="Satoshi Variable" pointSize="14"/>
+                                        <color key="textColor" red="0.38823529410000002" green="0.39607843139999999" blue="0.45098039220000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.94509803920000002" green="0.94509803920000002" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="IHS-5o-J57" secondAttribute="bottom" id="7j7-zG-be0"/>
+                                    <constraint firstItem="IHS-5o-J57" firstAttribute="top" secondItem="Pnp-VQ-Nxy" secondAttribute="bottom" constant="40" id="8BE-nM-fn2"/>
+                                    <constraint firstItem="sxr-08-GiY" firstAttribute="centerX" secondItem="Nza-kq-fa8" secondAttribute="centerX" id="8VD-tE-hwc"/>
+                                    <constraint firstItem="cpn-2k-cT8" firstAttribute="centerX" secondItem="Nza-kq-fa8" secondAttribute="centerX" id="D7T-h0-kKU"/>
+                                    <constraint firstItem="Pnp-VQ-Nxy" firstAttribute="leading" secondItem="Nza-kq-fa8" secondAttribute="leading" constant="24" id="GuX-cX-it6"/>
+                                    <constraint firstItem="Pnp-VQ-Nxy" firstAttribute="top" secondItem="sxr-08-GiY" secondAttribute="bottom" constant="8" id="OnP-pI-wpn"/>
+                                    <constraint firstItem="IHS-5o-J57" firstAttribute="leading" secondItem="Nza-kq-fa8" secondAttribute="leading" id="QgB-eR-tpS"/>
+                                    <constraint firstAttribute="trailing" secondItem="Pnp-VQ-Nxy" secondAttribute="trailing" constant="24" id="Z49-dr-T9p"/>
+                                    <constraint firstAttribute="trailing" secondItem="IHS-5o-J57" secondAttribute="trailing" id="eMX-Nf-Ggn"/>
+                                    <constraint firstItem="cpn-2k-cT8" firstAttribute="top" secondItem="Nza-kq-fa8" secondAttribute="top" constant="5" id="miW-Fo-11y"/>
+                                    <constraint firstItem="sxr-08-GiY" firstAttribute="top" secondItem="cpn-2k-cT8" secondAttribute="bottom" constant="8" id="o5d-Ko-MVl"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Nza-kq-fa8" secondAttribute="bottom" id="3JD-cG-Yip"/>
+                            <constraint firstAttribute="trailing" secondItem="Nza-kq-fa8" secondAttribute="trailing" id="Goy-JF-rdZ"/>
+                            <constraint firstAttribute="bottom" secondItem="igP-TJ-Htn" secondAttribute="bottom" id="IY4-a1-zDp"/>
+                            <constraint firstItem="igP-TJ-Htn" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="cvQ-0V-ze5"/>
+                            <constraint firstAttribute="trailing" secondItem="igP-TJ-Htn" secondAttribute="trailing" id="esS-yC-UTs"/>
+                            <constraint firstItem="igP-TJ-Htn" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="rGs-Dn-zdx"/>
+                            <constraint firstItem="Nza-kq-fa8" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="uGq-hq-xNx"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="chooseTitle" destination="sxr-08-GiY" id="PeD-x1-GLa"/>
+                        <outlet property="container" destination="Nza-kq-fa8" id="HmU-6O-wEv"/>
+                        <outlet property="smoke" destination="igP-TJ-Htn" id="73p-r1-1ut"/>
+                        <outlet property="tableHeight" destination="MtG-Ki-gva" id="VbS-0b-fBR"/>
+                        <outlet property="tableView" destination="IHS-5o-J57" id="SOy-UX-kq2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="34.782608695652179" y="98.4375"/>
+        </scene>
+    </scenes>
+</document>

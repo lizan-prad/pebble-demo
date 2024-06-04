@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Satoshi-Variable.ttf">
+            <string>SatoshiVariable-Bold_Bold</string>
+            <string>SatoshiVariable-Bold_Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChoosePrimaryTokenListTableViewCell" rowHeight="83" id="rzb-Iw-PL1" customClass="ChoosePrimaryTokenListTableViewCell" customModule="Pebble" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="83"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rzb-Iw-PL1" id="VMz-Jg-PzR">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="83"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zXQ-al-DlF">
+                        <rect key="frame" x="24" y="6" width="272" height="71"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bHn-4t-YAp">
+                                <rect key="frame" x="20" y="19.5" width="32" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="32" id="Q6i-dQ-Rmy"/>
+                                    <constraint firstAttribute="height" constant="32" id="s8L-F9-Ld9"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="LjL-oN-oy6">
+                                <rect key="frame" x="68" y="24.5" width="93.5" height="22.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e5b-pQ-wNN">
+                                        <rect key="frame" x="0.0" y="0.0" width="45.5" height="22.5"/>
+                                        <fontDescription key="fontDescription" name="SatoshiVariable-Bold_Bold" family="Satoshi Variable" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yzt-6S-dKg">
+                                        <rect key="frame" x="49.5" y="0.0" width="44" height="22.5"/>
+                                        <fontDescription key="fontDescription" name="SatoshiVariable-Bold_Medium" family="Satoshi Variable" pointSize="18"/>
+                                        <color key="textColor" red="0.59607843140000005" green="0.59607843140000005" blue="0.65490196079999996" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tick" translatesAutoresizingMaskIntoConstraints="NO" id="ehm-du-xBR">
+                                <rect key="frame" x="232" y="25.5" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="4nX-Qa-jtF"/>
+                                    <constraint firstAttribute="height" constant="20" id="5Vs-Lg-GcW"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="LjL-oN-oy6" firstAttribute="leading" secondItem="bHn-4t-YAp" secondAttribute="trailing" constant="16" id="Vdv-RA-AfP"/>
+                            <constraint firstItem="bHn-4t-YAp" firstAttribute="centerY" secondItem="zXQ-al-DlF" secondAttribute="centerY" id="b82-F2-xEx"/>
+                            <constraint firstItem="ehm-du-xBR" firstAttribute="centerY" secondItem="zXQ-al-DlF" secondAttribute="centerY" id="h9W-gt-nJY"/>
+                            <constraint firstItem="LjL-oN-oy6" firstAttribute="centerY" secondItem="zXQ-al-DlF" secondAttribute="centerY" id="iOl-kj-Mte"/>
+                            <constraint firstAttribute="trailing" secondItem="ehm-du-xBR" secondAttribute="trailing" constant="20" id="v7z-7i-PQg"/>
+                            <constraint firstItem="bHn-4t-YAp" firstAttribute="leading" secondItem="zXQ-al-DlF" secondAttribute="leading" constant="20" id="ytI-x9-h7f"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" red="0.94509803920000002" green="0.94509803920000002" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="zXQ-al-DlF" secondAttribute="trailing" constant="24" id="emL-GZ-gCN"/>
+                    <constraint firstItem="zXQ-al-DlF" firstAttribute="top" secondItem="VMz-Jg-PzR" secondAttribute="top" constant="6" id="nVb-Le-LVY"/>
+                    <constraint firstItem="zXQ-al-DlF" firstAttribute="leading" secondItem="VMz-Jg-PzR" secondAttribute="leading" constant="24" id="q4O-K6-Iox"/>
+                    <constraint firstAttribute="bottom" secondItem="zXQ-al-DlF" secondAttribute="bottom" constant="6" id="ruK-rM-GHk"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="ZdC-ie-6df"/>
+            <connections>
+                <outlet property="container" destination="zXQ-al-DlF" id="CMM-SK-eEb"/>
+                <outlet property="tickMark" destination="ehm-du-xBR" id="iGc-o2-ArS"/>
+                <outlet property="tokenImage" destination="bHn-4t-YAp" id="IC5-LZ-vhJ"/>
+                <outlet property="tokenName" destination="e5b-pQ-wNN" id="QDc-NC-goZ"/>
+                <outlet property="tokenSymbol" destination="yzt-6S-dKg" id="f1G-v1-n0k"/>
+            </connections>
+            <point key="canvasLocation" x="181.15942028985509" y="47.879464285714285"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="tick" width="21" height="21"/>
+    </resources>
+</document>

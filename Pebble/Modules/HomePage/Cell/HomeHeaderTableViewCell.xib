@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Satoshi-Variable.ttf">
+            <string>SatoshiVariable-Bold_Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HomeHeaderTableViewCell" rowHeight="68" id="KGk-i7-Jjw" customClass="HomeHeaderTableViewCell" customModule="Pebble" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="62"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="62"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Token balance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1QK-qP-Agv">
+                        <rect key="frame" x="24" y="22" width="121" height="18"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="18" id="Orl-hm-Dei"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="SatoshiVariable-Bold_Bold" family="Satoshi Variable" pointSize="18"/>
+                        <color key="textColor" red="0.1137254902" green="0.1137254902" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sY2-fF-VWr">
+                        <rect key="frame" x="24" y="51" width="272" height="1"/>
+                        <color key="backgroundColor" red="0.59607843140000005" green="0.59607843140000005" blue="0.65490196079999996" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="Aen-MA-Jgz"/>
+                        </constraints>
+                    </view>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Ug-O9-Q9U">
+                        <rect key="frame" x="272" y="19" width="24" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="24" id="4U0-Ek-pBg"/>
+                            <constraint firstAttribute="width" constant="24" id="4cW-gW-3LJ"/>
+                        </constraints>
+                        <color key="tintColor" red="0.1137254902" green="0.1137254902" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" image="arrow-circle"/>
+                        <connections>
+                            <action selector="seeAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="vfN-pB-TVh"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <color key="backgroundColor" red="0.94509803921568625" green="0.94509803921568625" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="7Ug-O9-Q9U" secondAttribute="trailing" constant="24" id="DgA-ao-s6I"/>
+                    <constraint firstItem="1QK-qP-Agv" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="24" id="Qil-qh-WGp"/>
+                    <constraint firstAttribute="bottom" secondItem="sY2-fF-VWr" secondAttribute="bottom" constant="10" id="Vcl-hQ-HoN"/>
+                    <constraint firstAttribute="trailing" secondItem="sY2-fF-VWr" secondAttribute="trailing" constant="24" id="Xlf-W4-XPA"/>
+                    <constraint firstItem="sY2-fF-VWr" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="24" id="hcn-ww-die"/>
+                    <constraint firstItem="1QK-qP-Agv" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="kIE-f3-5dm"/>
+                    <constraint firstItem="7Ug-O9-Q9U" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="mxI-jv-b3C"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="headerTitle" destination="1QK-qP-Agv" id="PWp-12-KYr"/>
+                <outlet property="margin" destination="sY2-fF-VWr" id="20V-5b-h4z"/>
+                <outlet property="seeBtn" destination="7Ug-O9-Q9U" id="DJ4-IX-pW8"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="119.86607142857142"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="arrow-circle" width="24" height="24"/>
+    </resources>
+</document>

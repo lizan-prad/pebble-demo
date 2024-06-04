@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Play-Bold.ttf">
+            <string>Play-Bold</string>
+        </array>
+        <array key="Satoshi-Variable.ttf">
+            <string>SatoshiVariable-Bold_Bold</string>
+            <string>SatoshiVariable-Bold_Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Security Face View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="SecurityFaceViewController" id="Y6W-OH-hqX" customClass="SecurityFaceViewController" customModule="Pebble" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set Up Face ID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tVB-gx-bfN">
+                                <rect key="frame" x="124.5" y="383" width="165" height="30"/>
+                                <fontDescription key="fontDescription" name="SatoshiVariable-Bold_Bold" family="Satoshi Variable" pointSize="24"/>
+                                <color key="textColor" red="0.1137254902" green="0.1137254902" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="faceframe" translatesAutoresizingMaskIntoConstraints="NO" id="1iv-Af-ebc">
+                                <rect key="frame" x="132" y="201" width="150" height="150"/>
+                                <color key="tintColor" red="0.1137254902" green="0.1137254902" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="dSc-vw-nAt"/>
+                                    <constraint firstAttribute="height" constant="150" id="hqK-HM-hjN"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set up a Face ID so that you don't need to enter a code every time you enter." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="60K-Cy-yOn">
+                                <rect key="frame" x="50" y="437" width="314" height="35"/>
+                                <fontDescription key="fontDescription" name="SatoshiVariable-Bold_Regular" family="Satoshi Variable" pointSize="14"/>
+                                <color key="textColor" red="0.38823529410000002" green="0.39607843139999999" blue="0.45098039220000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="ewy-Lt-MCl">
+                                <rect key="frame" x="24" y="696" width="366" height="126"/>
+                                <subviews>
+                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bkz-l8-1ht">
+                                        <rect key="frame" x="0.0" y="0.0" width="366" height="55"/>
+                                        <color key="backgroundColor" red="0.1137254902" green="0.1137254902" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="55" id="LFa-JE-ced"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Play-Bold" family="Play" pointSize="18"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Set Up Now"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Set Up Now">
+                                            <fontDescription key="titleFontDescription" name="SatoshiVariable-Bold_Bold" family="Satoshi Variable" pointSize="18"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="setupAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="oTB-OW-iqC"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MNs-RZ-yPd">
+                                        <rect key="frame" x="0.0" y="71" width="366" height="55"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="55" id="e0e-2V-S9u"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Play-Bold" family="Play" pointSize="18"/>
+                                        <color key="tintColor" red="0.1137254902" green="0.1137254902" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Skip"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Skip">
+                                            <fontDescription key="titleFontDescription" name="SatoshiVariable-Bold_Bold" family="Satoshi Variable" pointSize="18"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="skipAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="bN1-Bs-vd7"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ewy-Lt-MCl" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="1Hm-fo-d5f"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ewy-Lt-MCl" secondAttribute="trailing" constant="24" id="39Y-7C-xTD"/>
+                            <constraint firstItem="1iv-Af-ebc" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="4LC-b0-3ef"/>
+                            <constraint firstItem="60K-Cy-yOn" firstAttribute="top" secondItem="tVB-gx-bfN" secondAttribute="bottom" constant="24" id="AnS-12-laC"/>
+                            <constraint firstItem="60K-Cy-yOn" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="50" id="B6m-ff-2qY"/>
+                            <constraint firstItem="tVB-gx-bfN" firstAttribute="top" secondItem="1iv-Af-ebc" secondAttribute="bottom" constant="32" id="IRg-TC-guO"/>
+                            <constraint firstItem="tVB-gx-bfN" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="IvP-z8-x3g"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="60K-Cy-yOn" secondAttribute="trailing" constant="50" id="Mmg-qk-HjK"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="ewy-Lt-MCl" secondAttribute="bottom" constant="40" id="tzM-b4-mb0"/>
+                            <constraint firstItem="tVB-gx-bfN" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" constant="-50" id="vaH-5z-bsV"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bioDesc" destination="60K-Cy-yOn" id="gTA-Ld-jf7"/>
+                        <outlet property="bioImage" destination="1iv-Af-ebc" id="Md7-C0-kAe"/>
+                        <outlet property="bioTitle" destination="tVB-gx-bfN" id="Gtv-LO-Lgr"/>
+                        <outlet property="setupBtn" destination="bkz-l8-1ht" id="2EN-YF-exa"/>
+                        <outlet property="skipBtn" destination="MNs-RZ-yPd" id="vUB-7v-y4a"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="12" y="98"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="faceframe" width="256" height="256"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

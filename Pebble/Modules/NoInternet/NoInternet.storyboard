@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Play-Bold.ttf">
+            <string>Play-Bold</string>
+        </array>
+        <array key="Satoshi-Variable.ttf">
+            <string>SatoshiVariable-Bold_Bold</string>
+            <string>SatoshiVariable-Bold_Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--No Internet View Controller-->
+        <scene sceneID="ytN-Mg-SqX">
+            <objects>
+                <viewController storyboardIdentifier="NoInternetViewController" modalPresentationStyle="overFullScreen" id="p6N-2G-mpY" customClass="NoInternetViewController" customModule="Pebble" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uTa-Rh-p8y">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Connection failed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8e1-fD-Gac">
+                                <rect key="frame" x="108" y="383" width="198" height="30"/>
+                                <fontDescription key="fontDescription" name="SatoshiVariable-Bold_Bold" family="Satoshi Variable" pointSize="24"/>
+                                <color key="textColor" red="0.1137254902" green="0.1137254902" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noInternet" translatesAutoresizingMaskIntoConstraints="NO" id="p93-Fl-4hY">
+                                <rect key="frame" x="148.5" y="234" width="117" height="117"/>
+                                <color key="tintColor" red="0.1137254902" green="0.1137254902" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="117" id="bbr-wZ-bvk"/>
+                                    <constraint firstAttribute="height" constant="117" id="lgZ-ab-4HO"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please check your network settings." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="02k-fs-vEi">
+                                <rect key="frame" x="50" y="437" width="314" height="17.5"/>
+                                <fontDescription key="fontDescription" name="SatoshiVariable-Bold_Regular" family="Satoshi Variable" pointSize="14"/>
+                                <color key="textColor" red="0.38823529410000002" green="0.39607843139999999" blue="0.45098039220000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="SY8-RL-k2v">
+                                <rect key="frame" x="24" y="767" width="366" height="55"/>
+                                <subviews>
+                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oR3-C3-xl6">
+                                        <rect key="frame" x="0.0" y="0.0" width="366" height="55"/>
+                                        <color key="backgroundColor" red="0.1137254902" green="0.1137254902" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="55" id="FI4-hY-UI6"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Play-Bold" family="Play" pointSize="18"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Set Up Now"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Refresh">
+                                            <fontDescription key="titleFontDescription" name="SatoshiVariable-Bold_Bold" family="Satoshi Variable" pointSize="18"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="refreshAction:" destination="p6N-2G-mpY" eventType="touchUpInside" id="fQ3-gt-FVY"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vlz-L0-2Pu"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="8e1-fD-Gac" firstAttribute="centerX" secondItem="uTa-Rh-p8y" secondAttribute="centerX" id="2S3-nu-san"/>
+                            <constraint firstItem="SY8-RL-k2v" firstAttribute="leading" secondItem="vlz-L0-2Pu" secondAttribute="leading" constant="24" id="58I-AQ-DUX"/>
+                            <constraint firstItem="vlz-L0-2Pu" firstAttribute="trailing" secondItem="SY8-RL-k2v" secondAttribute="trailing" constant="24" id="CG9-OT-OUc"/>
+                            <constraint firstItem="p93-Fl-4hY" firstAttribute="centerX" secondItem="uTa-Rh-p8y" secondAttribute="centerX" id="J0G-NV-4pz"/>
+                            <constraint firstItem="vlz-L0-2Pu" firstAttribute="trailing" secondItem="02k-fs-vEi" secondAttribute="trailing" constant="50" id="Ug9-a2-HB1"/>
+                            <constraint firstItem="vlz-L0-2Pu" firstAttribute="bottom" secondItem="SY8-RL-k2v" secondAttribute="bottom" constant="40" id="hcP-vN-ABx"/>
+                            <constraint firstItem="02k-fs-vEi" firstAttribute="leading" secondItem="vlz-L0-2Pu" secondAttribute="leading" constant="50" id="lQp-Cw-Ldk"/>
+                            <constraint firstItem="02k-fs-vEi" firstAttribute="top" secondItem="8e1-fD-Gac" secondAttribute="bottom" constant="24" id="o4y-2X-Uf0"/>
+                            <constraint firstItem="8e1-fD-Gac" firstAttribute="centerY" secondItem="uTa-Rh-p8y" secondAttribute="centerY" constant="-50" id="s0I-JS-V8J"/>
+                            <constraint firstItem="8e1-fD-Gac" firstAttribute="top" secondItem="p93-Fl-4hY" secondAttribute="bottom" constant="32" id="vGY-Zr-Ygm"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="refreshBtn" destination="oR3-C3-xl6" id="jes-JX-Vbu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pte-Sf-qfZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="12" y="98"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="noInternet" width="117" height="117"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

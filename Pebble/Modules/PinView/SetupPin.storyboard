@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Satoshi-Variable.ttf">
+            <string>SatoshiVariable-Bold_Bold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Setup Pin View Controller-->
+        <scene sceneID="ifh-Ya-PhK">
+            <objects>
+                <viewController storyboardIdentifier="SetupPinViewController" id="MoT-xH-rXI" customClass="SetupPinViewController" customModule="Pebble" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iLc-9h-RDn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Uxk-Rc-tip">
+                                <rect key="frame" x="0.0" y="457" width="414" height="350"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="350" id="BiN-fZ-bJN"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="xVr-Il-rcj">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="50" minY="0.0" maxX="50" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xd6-O8-Wzd" customClass="SVPinView" customModule="SVPinView">
+                                <rect key="frame" x="20" y="397" width="374" height="60"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="IdP-aH-F4v"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="pinLength">
+                                        <integer key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="shouldSecureText" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="activeBorderLineColor">
+                                        <color key="value" red="0.066666666669999999" green="0.094117647060000004" blue="0.1529411765" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderLineColor">
+                                        <color key="value" red="0.79215686269999996" green="0.80000000000000004" blue="0.81176470590000005" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                        <color key="value" red="0.1137254902" green="0.1137254902" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="●●●●"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="secureTextDelay">
+                                        <integer key="value" value="0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="secureCharacter" value="●"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PIN code" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YM3-HE-SEW">
+                                <rect key="frame" x="155.5" y="112" width="103" height="30"/>
+                                <fontDescription key="fontDescription" name="SatoshiVariable-Bold_Bold" family="Satoshi Variable" pointSize="24"/>
+                                <color key="textColor" red="0.1137254902" green="0.1137254902" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create your PIN code to enter the app" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lBk-P9-fkw">
+                                <rect key="frame" x="83" y="166" width="248.5" height="17.5"/>
+                                <fontDescription key="fontDescription" name="SatoshiVariable-Bold_Bold" family="Satoshi Variable" pointSize="14"/>
+                                <color key="textColor" red="0.38823529410000002" green="0.39607843139999999" blue="0.45098039220000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="3Bc-8b-dXK"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="YM3-HE-SEW" firstAttribute="centerX" secondItem="iLc-9h-RDn" secondAttribute="centerX" id="4tl-3m-MKh"/>
+                            <constraint firstItem="3Bc-8b-dXK" firstAttribute="trailing" secondItem="xd6-O8-Wzd" secondAttribute="trailing" constant="20" id="6qp-eF-SjP"/>
+                            <constraint firstItem="YM3-HE-SEW" firstAttribute="top" secondItem="3Bc-8b-dXK" secondAttribute="top" constant="68" id="8R4-27-tn2"/>
+                            <constraint firstItem="Uxk-Rc-tip" firstAttribute="top" secondItem="xd6-O8-Wzd" secondAttribute="bottom" id="Ba9-uS-ufV"/>
+                            <constraint firstItem="lBk-P9-fkw" firstAttribute="centerX" secondItem="iLc-9h-RDn" secondAttribute="centerX" id="NwL-9D-jaW"/>
+                            <constraint firstItem="lBk-P9-fkw" firstAttribute="top" secondItem="YM3-HE-SEW" secondAttribute="bottom" constant="24" id="V9w-f1-6Ys"/>
+                            <constraint firstItem="Uxk-Rc-tip" firstAttribute="trailing" secondItem="3Bc-8b-dXK" secondAttribute="trailing" id="Z8f-jT-a58"/>
+                            <constraint firstItem="3Bc-8b-dXK" firstAttribute="bottom" secondItem="Uxk-Rc-tip" secondAttribute="bottom" constant="55" id="jg6-1p-unr"/>
+                            <constraint firstItem="xd6-O8-Wzd" firstAttribute="leading" secondItem="3Bc-8b-dXK" secondAttribute="leading" constant="20" id="oX8-oc-TTM"/>
+                            <constraint firstItem="Uxk-Rc-tip" firstAttribute="leading" secondItem="3Bc-8b-dXK" secondAttribute="leading" id="sBC-fl-W4R"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="Uxk-Rc-tip" id="sj4-mL-bS1"/>
+                        <outlet property="pinDesc" destination="lBk-P9-fkw" id="3kh-po-dee"/>
+                        <outlet property="pinTitle" destination="YM3-HE-SEW" id="ZSV-IL-o7n"/>
+                        <outlet property="pinView" destination="xd6-O8-Wzd" id="vmg-Kl-K66"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XHF-gj-RDd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="97.767857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

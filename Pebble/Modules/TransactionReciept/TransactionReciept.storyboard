@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Satoshi-Variable.ttf">
+            <string>SatoshiVariable-Bold</string>
+            <string>SatoshiVariable-Bold_Bold</string>
+            <string>SatoshiVariable-Bold_Medium</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Transaction Reciept View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="TransactionRecieptViewController" id="Y6W-OH-hqX" customClass="TransactionRecieptViewController" customModule="Pebble" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bx6-yb-KlF">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DnO-jL-XRr">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="791.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="bottom" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="mVf-S8-kQV">
+                                                <rect key="frame" x="109" y="100" width="196.5" height="40"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ujM-Sv-osV">
+                                                        <rect key="frame" x="0.0" y="10" width="14" height="30"/>
+                                                        <fontDescription key="fontDescription" name="SatoshiVariable-Bold_Medium" family="Satoshi Variable" pointSize="24"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3,372.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="82h-tj-w5m">
+                                                        <rect key="frame" x="22" y="0.0" width="174.5" height="40"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="Gzs-Xk-fFb"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="SatoshiVariable-Bold" family="Satoshi Variable" pointSize="40"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vDd-Sg-7gY">
+                                                <rect key="frame" x="164.5" y="192" width="85" height="23"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tick-1" translatesAutoresizingMaskIntoConstraints="NO" id="fs0-c9-2j5">
+                                                        <rect key="frame" x="7" y="7.5" width="8" height="8"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="8" id="OWi-oj-gxV"/>
+                                                            <constraint firstAttribute="height" constant="8" id="ils-aA-NXF"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Completed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mai-ml-l5e">
+                                                        <rect key="frame" x="22" y="5.5" width="52" height="12.5"/>
+                                                        <fontDescription key="fontDescription" name="SatoshiVariable-Bold_Bold" family="Satoshi Variable" pointSize="10"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.16862745098039217" green="0.84705882352941175" blue="0.63529411764705879" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="23" id="0De-un-PMk"/>
+                                                    <constraint firstAttribute="width" constant="85" id="7Mf-P5-V0V"/>
+                                                    <constraint firstItem="mai-ml-l5e" firstAttribute="leading" secondItem="fs0-c9-2j5" secondAttribute="trailing" constant="7" id="U80-x2-bcB"/>
+                                                    <constraint firstItem="fs0-c9-2j5" firstAttribute="leading" secondItem="vDd-Sg-7gY" secondAttribute="leading" constant="7" id="Y1x-BT-Sm9"/>
+                                                    <constraint firstItem="mai-ml-l5e" firstAttribute="centerY" secondItem="vDd-Sg-7gY" secondAttribute="centerY" id="bN1-Lf-LdH"/>
+                                                    <constraint firstItem="fs0-c9-2j5" firstAttribute="centerY" secondItem="vDd-Sg-7gY" secondAttribute="centerY" id="uz7-AS-J9a"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3,353.12 USDC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UVd-MF-pjE">
+                                                <rect key="frame" x="153.5" y="156" width="107" height="20"/>
+                                                <fontDescription key="fontDescription" name="SatoshiVariable-Bold_Medium" family="Satoshi Variable" pointSize="16"/>
+                                                <color key="textColor" red="0.38823529410000002" green="0.39607843139999999" blue="0.45098039220000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hnI-DB-gTi">
+                                                <rect key="frame" x="24" y="239" width="366" height="52.5"/>
+                                                <string key="text">Estimated completion time: 2022.03.06 12:32:57 
+Please note that you will receive a message once it is completed.</string>
+                                                <fontDescription key="fontDescription" name="SatoshiVariable-Bold_Medium" family="Satoshi Variable" pointSize="14"/>
+                                                <color key="textColor" red="0.38823529410000002" green="0.39607843139999999" blue="0.45098039220000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZBO-qW-AQv">
+                                                <rect key="frame" x="24" y="315.5" width="366" height="14"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="14" id="vgA-to-qqW"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="SatoshiVariable-Bold_Bold" family="Satoshi Variable" pointSize="14"/>
+                                                <color key="tintColor" red="0.12941176469999999" green="0.12941176469999999" blue="0.17254901959999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Why hasn’t my withdrawal arrived?"/>
+                                            </button>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gjx-KV-C4U">
+                                                <rect key="frame" x="24" y="353.5" width="366" height="276"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="vPC-VB-cb8">
+                                                        <rect key="frame" x="16" y="16" width="334" height="240"/>
+                                                        <subviews>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="JNw-DM-LdO">
+                                                                <rect key="frame" x="0.0" y="0.0" width="334" height="20"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Confirmations" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ga3-jF-PYN">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="102" height="20"/>
+                                                                        <fontDescription key="fontDescription" name="SatoshiVariable-Bold_Medium" family="Satoshi Variable" pointSize="16"/>
+                                                                        <color key="textColor" red="0.38823529410000002" green="0.39607843139999999" blue="0.45098039220000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0/128" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q3h-aq-XWg">
+                                                                        <rect key="frame" x="114" y="0.0" width="220" height="20"/>
+                                                                        <fontDescription key="fontDescription" name="SatoshiVariable-Bold_Bold" family="Satoshi Variable" pointSize="16"/>
+                                                                        <color key="textColor" red="0.1137254902" green="0.1137254902" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="XKx-AG-Syk">
+                                                                <rect key="frame" x="0.0" y="44" width="334" height="20"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Network" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aUl-hy-Deh">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="61" height="20"/>
+                                                                        <fontDescription key="fontDescription" name="SatoshiVariable-Bold_Medium" family="Satoshi Variable" pointSize="16"/>
+                                                                        <color key="textColor" red="0.38823529410000002" green="0.39607843139999999" blue="0.45098039220000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ethereum" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gW7-dy-OE2">
+                                                                        <rect key="frame" x="73" y="0.0" width="261" height="20"/>
+                                                                        <fontDescription key="fontDescription" name="SatoshiVariable-Bold_Bold" family="Satoshi Variable" pointSize="16"/>
+                                                                        <color key="textColor" red="0.1137254902" green="0.1137254902" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="P67-8F-6bW">
+                                                                <rect key="frame" x="0.0" y="88" width="334" height="20"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Token" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="96N-zQ-ubn">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="43" height="20"/>
+                                                                        <fontDescription key="fontDescription" name="SatoshiVariable-Bold_Medium" family="Satoshi Variable" pointSize="16"/>
+                                                                        <color key="textColor" red="0.38823529410000002" green="0.39607843139999999" blue="0.45098039220000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USDC" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8No-9z-nAo">
+                                                                        <rect key="frame" x="55" y="0.0" width="279" height="20"/>
+                                                                        <fontDescription key="fontDescription" name="SatoshiVariable-Bold_Bold" family="Satoshi Variable" pointSize="16"/>
+                                                                        <color key="textColor" red="0.1137254902" green="0.1137254902" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="MXD-gO-O4j">
+                                                                <rect key="frame" x="0.0" y="132" width="334" height="20"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7CX-6v-ttL">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="58.5" height="20"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" constant="58.5" id="bWt-Fv-Pot"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" name="SatoshiVariable-Bold_Medium" family="Satoshi Variable" pointSize="16"/>
+                                                                        <color key="textColor" red="0.38823529410000002" green="0.39607843139999999" blue="0.45098039220000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="erd1z...r0ah8" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lgK-uK-4tq">
+                                                                        <rect key="frame" x="70.5" y="0.0" width="263.5" height="20"/>
+                                                                        <fontDescription key="fontDescription" name="SatoshiVariable-Bold_Bold" family="Satoshi Variable" pointSize="16"/>
+                                                                        <color key="textColor" red="0.1137254902" green="0.1137254902" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="tLf-va-yQB">
+                                                                <rect key="frame" x="0.0" y="176" width="334" height="20"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Txn Hash" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AoA-W4-iZk">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="66.5" height="20"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" constant="66.5" id="eEk-UN-T7B"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" name="SatoshiVariable-Bold_Medium" family="Satoshi Variable" pointSize="16"/>
+                                                                        <color key="textColor" red="0.38823529410000002" green="0.39607843139999999" blue="0.45098039220000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Internal 1202213024450" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8fZ-WB-Hx0">
+                                                                        <rect key="frame" x="78.5" y="0.0" width="255.5" height="20"/>
+                                                                        <fontDescription key="fontDescription" name="SatoshiVariable-Bold_Bold" family="Satoshi Variable" pointSize="16"/>
+                                                                        <color key="textColor" red="0.1137254902" green="0.1137254902" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="We4-o3-shg">
+                                                                <rect key="frame" x="0.0" y="220" width="334" height="20"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dWj-nH-M1W">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="34" height="20"/>
+                                                                        <fontDescription key="fontDescription" name="SatoshiVariable-Bold_Medium" family="Satoshi Variable" pointSize="16"/>
+                                                                        <color key="textColor" red="0.38823529410000002" green="0.39607843139999999" blue="0.45098039220000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2022.03.06 12:27:47" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bgn-L0-d9V">
+                                                                        <rect key="frame" x="46" y="0.0" width="288" height="20"/>
+                                                                        <fontDescription key="fontDescription" name="SatoshiVariable-Bold_Bold" family="Satoshi Variable" pointSize="16"/>
+                                                                        <color key="textColor" red="0.1137254902" green="0.1137254902" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.97647058823529409" green="0.97647058823529409" blue="0.99607843137254903" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstItem="vPC-VB-cb8" firstAttribute="top" secondItem="Gjx-KV-C4U" secondAttribute="top" constant="16" id="Ibf-KF-o8m"/>
+                                                    <constraint firstAttribute="bottom" secondItem="vPC-VB-cb8" secondAttribute="bottom" constant="20" id="Xfa-Ra-gSy"/>
+                                                    <constraint firstItem="vPC-VB-cb8" firstAttribute="leading" secondItem="Gjx-KV-C4U" secondAttribute="leading" constant="16" id="nsq-YY-Dv0"/>
+                                                    <constraint firstAttribute="trailing" secondItem="vPC-VB-cb8" secondAttribute="trailing" constant="16" id="sHt-iM-2RE"/>
+                                                </constraints>
+                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qj2-mp-PHi">
+                                                <rect key="frame" x="24" y="677.5" width="366" height="14"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="14" id="Of2-Ss-huP"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="SatoshiVariable-Bold_Bold" family="Satoshi Variable" pointSize="14"/>
+                                                <color key="tintColor" red="0.12941176469999999" green="0.12941176469999999" blue="0.17254901959999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Need help? Check FAQs"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iJ3-Ef-L3R">
+                                                <rect key="frame" x="374" y="20" width="20" height="20"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="20" id="H60-Fi-efd"/>
+                                                    <constraint firstAttribute="height" constant="20" id="h8j-so-geV"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" image="close"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eXd-AM-BE6">
+                                                <rect key="frame" x="14" y="20" width="76" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="vej-tU-gol"/>
+                                                </constraints>
+                                                <color key="tintColor" red="0.1137254902" green="0.1137254902" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="back" title="Back" imagePadding="9">
+                                                    <fontDescription key="titleFontDescription" name="SatoshiVariable-Bold_Bold" family="Satoshi Variable" pointSize="16"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="backAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="em4-fO-Phn"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.94509803921568625" green="0.94509803921568625" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="mVf-S8-kQV" firstAttribute="centerX" secondItem="DnO-jL-XRr" secondAttribute="centerX" id="0vW-DD-za6"/>
+                                            <constraint firstAttribute="trailing" secondItem="Gjx-KV-C4U" secondAttribute="trailing" constant="24" id="4hy-ry-uqw"/>
+                                            <constraint firstItem="Qj2-mp-PHi" firstAttribute="top" secondItem="Gjx-KV-C4U" secondAttribute="bottom" constant="48" id="6SN-3M-VxJ"/>
+                                            <constraint firstItem="eXd-AM-BE6" firstAttribute="top" secondItem="DnO-jL-XRr" secondAttribute="top" constant="20" id="9fF-93-CUu"/>
+                                            <constraint firstItem="Gjx-KV-C4U" firstAttribute="leading" secondItem="DnO-jL-XRr" secondAttribute="leading" constant="24" id="CzH-I5-702"/>
+                                            <constraint firstItem="Gjx-KV-C4U" firstAttribute="top" secondItem="ZBO-qW-AQv" secondAttribute="bottom" constant="24" id="F0L-Ob-sp4"/>
+                                            <constraint firstItem="hnI-DB-gTi" firstAttribute="top" secondItem="vDd-Sg-7gY" secondAttribute="bottom" constant="24" id="HJo-9X-isF"/>
+                                            <constraint firstItem="vDd-Sg-7gY" firstAttribute="top" secondItem="UVd-MF-pjE" secondAttribute="bottom" constant="16" id="ILK-WT-ILJ"/>
+                                            <constraint firstItem="ZBO-qW-AQv" firstAttribute="top" secondItem="hnI-DB-gTi" secondAttribute="bottom" constant="24" id="Kme-2K-TrB"/>
+                                            <constraint firstAttribute="trailing" secondItem="ZBO-qW-AQv" secondAttribute="trailing" constant="24" id="LVa-Gq-nY6"/>
+                                            <constraint firstItem="hnI-DB-gTi" firstAttribute="leading" secondItem="DnO-jL-XRr" secondAttribute="leading" constant="24" id="LvB-b8-Vqo"/>
+                                            <constraint firstItem="eXd-AM-BE6" firstAttribute="leading" secondItem="DnO-jL-XRr" secondAttribute="leading" constant="14" id="NVn-bM-ttf"/>
+                                            <constraint firstAttribute="trailing" secondItem="hnI-DB-gTi" secondAttribute="trailing" constant="24" id="O3Z-GV-R0b"/>
+                                            <constraint firstItem="Qj2-mp-PHi" firstAttribute="leading" secondItem="DnO-jL-XRr" secondAttribute="leading" constant="24" id="T4g-xJ-TuK"/>
+                                            <constraint firstItem="UVd-MF-pjE" firstAttribute="centerX" secondItem="DnO-jL-XRr" secondAttribute="centerX" id="dPD-Xt-ifB"/>
+                                            <constraint firstItem="vDd-Sg-7gY" firstAttribute="centerX" secondItem="DnO-jL-XRr" secondAttribute="centerX" id="eWz-7u-Y9f"/>
+                                            <constraint firstItem="UVd-MF-pjE" firstAttribute="top" secondItem="mVf-S8-kQV" secondAttribute="bottom" constant="16" id="enX-Vx-ECZ"/>
+                                            <constraint firstItem="mVf-S8-kQV" firstAttribute="top" secondItem="DnO-jL-XRr" secondAttribute="top" constant="100" id="fUR-ep-SEO"/>
+                                            <constraint firstAttribute="trailing" secondItem="Qj2-mp-PHi" secondAttribute="trailing" constant="24" id="ghp-Ds-73g"/>
+                                            <constraint firstItem="ZBO-qW-AQv" firstAttribute="leading" secondItem="DnO-jL-XRr" secondAttribute="leading" constant="24" id="liO-Zh-THp"/>
+                                            <constraint firstAttribute="bottom" secondItem="Qj2-mp-PHi" secondAttribute="bottom" constant="100" id="nqi-V1-MyW"/>
+                                            <constraint firstItem="iJ3-Ef-L3R" firstAttribute="top" secondItem="DnO-jL-XRr" secondAttribute="top" constant="20" id="pXS-oW-JFw"/>
+                                            <constraint firstAttribute="trailing" secondItem="iJ3-Ef-L3R" secondAttribute="trailing" constant="20" id="ww0-pv-Fe1"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="DnO-jL-XRr" firstAttribute="top" secondItem="bx6-yb-KlF" secondAttribute="top" id="9eA-b8-VJ6"/>
+                                    <constraint firstItem="DnO-jL-XRr" firstAttribute="leading" secondItem="bx6-yb-KlF" secondAttribute="leading" id="ROH-ug-uKJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="DnO-jL-XRr" secondAttribute="trailing" id="etC-C9-sln"/>
+                                    <constraint firstAttribute="bottom" secondItem="DnO-jL-XRr" secondAttribute="bottom" id="oFM-Ry-Sqd"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" red="0.94509803920000002" green="0.94509803920000002" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="bx6-yb-KlF" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="B0b-Le-fXo"/>
+                            <constraint firstItem="DnO-jL-XRr" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" id="IBC-Yx-AKi"/>
+                            <constraint firstAttribute="bottom" secondItem="bx6-yb-KlF" secondAttribute="bottom" id="Vty-mu-jmK"/>
+                            <constraint firstItem="bx6-yb-KlF" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="ecR-Lc-CVo"/>
+                            <constraint firstItem="bx6-yb-KlF" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="tTJ-Gl-ILf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="address" destination="lgK-uK-4tq" id="lHw-BW-RkA"/>
+                        <outlet property="amountCurrency" destination="82h-tj-w5m" id="ei8-qS-ASN"/>
+                        <outlet property="amountToken" destination="UVd-MF-pjE" id="73d-zd-pEm"/>
+                        <outlet property="arrivalLabel" destination="ZBO-qW-AQv" id="aax-3s-hAp"/>
+                        <outlet property="backBtn" destination="eXd-AM-BE6" id="8qi-Og-guG"/>
+                        <outlet property="bottomContainer" destination="Gjx-KV-C4U" id="fE2-Xl-hCm"/>
+                        <outlet property="closeBtn" destination="iJ3-Ef-L3R" id="Sc4-D4-aIX"/>
+                        <outlet property="confirmationStack" destination="JNw-DM-LdO" id="0cN-LJ-ljd"/>
+                        <outlet property="confirmations" destination="Q3h-aq-XWg" id="lfu-kn-1Vk"/>
+                        <outlet property="container" destination="DnO-jL-XRr" id="GQA-N5-SFz"/>
+                        <outlet property="dateLabel" destination="bgn-L0-d9V" id="TJg-EC-Wvh"/>
+                        <outlet property="dollarLabel" destination="ujM-Sv-osV" id="szZ-jk-wn9"/>
+                        <outlet property="faqLabel" destination="Qj2-mp-PHi" id="oD4-Xd-3qv"/>
+                        <outlet property="networkNamw" destination="gW7-dy-OE2" id="KtE-EB-bcF"/>
+                        <outlet property="networkStack" destination="XKx-AG-Syk" id="mQi-jU-TG5"/>
+                        <outlet property="status" destination="mai-ml-l5e" id="atQ-mo-D1Q"/>
+                        <outlet property="statusContainer" destination="vDd-Sg-7gY" id="DeC-PJ-fAJ"/>
+                        <outlet property="statusImage" destination="fs0-c9-2j5" id="NM8-wD-22Z"/>
+                        <outlet property="tokenSymbol" destination="8No-9z-nAo" id="Y5y-EV-0Bi"/>
+                        <outlet property="txnHash" destination="8fZ-WB-Hx0" id="BLK-1f-fcW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="34.782608695652179" y="98.4375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="back" width="6" height="10"/>
+        <image name="close" width="12" height="12"/>
+        <image name="tick-1" width="7" height="5"/>
+    </resources>
+</document>

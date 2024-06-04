@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Satoshi-Variable.ttf">
+            <string>SatoshiVariable-Bold_Bold</string>
+            <string>SatoshiVariable-Bold_Medium</string>
+            <string>SatoshiVariable-Bold_Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Set User Name View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="SetUserNameViewController" id="Y6W-OH-hqX" customClass="SetUserNameViewController" customModule="Pebble" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How can other users find you?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dOw-YB-yoz">
+                                <rect key="frame" x="24" y="84" width="366" height="80"/>
+                                <fontDescription key="fontDescription" name="SatoshiVariable-Bold_Bold" family="Satoshi Variable" pointSize="32"/>
+                                <color key="textColor" red="0.066666666669999999" green="0.094117647060000004" blue="0.1529411765" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose username to your account" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CMN-Ci-AqJ">
+                                <rect key="frame" x="24" y="176" width="366" height="20"/>
+                                <fontDescription key="fontDescription" name="SatoshiVariable-Bold_Regular" family="Satoshi Variable" pointSize="16"/>
+                                <color key="textColor" red="0.59607843140000005" green="0.59607843140000005" blue="0.65490196079999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="avq-jU-ydk">
+                                <rect key="frame" x="24" y="228" width="366" height="112"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="OFS-Hd-nuj">
+                                        <rect key="frame" x="0.0" y="0.0" width="366" height="112"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e1q-6u-sc6">
+                                                <rect key="frame" x="0.0" y="0.0" width="366" height="20"/>
+                                                <fontDescription key="fontDescription" name="SatoshiVariable-Bold_Medium" family="Satoshi Variable" pointSize="16"/>
+                                                <color key="textColor" red="0.066666666669999999" green="0.094117647060000004" blue="0.1529411765" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fZj-Kz-1Wi">
+                                                <rect key="frame" x="0.0" y="28" width="366" height="56"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lrb-3d-y1V">
+                                                        <rect key="frame" x="49" y="17.5" width="297" height="21.5"/>
+                                                        <fontDescription key="fontDescription" name="SatoshiVariable-Bold_Regular" family="Satoshi Variable" pointSize="16"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4i7-x3-C9Q">
+                                                        <rect key="frame" x="20" y="18" width="15" height="20"/>
+                                                        <fontDescription key="fontDescription" name="SatoshiVariable-Bold_Regular" family="Satoshi Variable" pointSize="16"/>
+                                                        <color key="textColor" red="0.59607843140000005" green="0.59607843140000005" blue="0.65490196079999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="56" id="0X6-1o-Tgy"/>
+                                                    <constraint firstAttribute="trailing" secondItem="lrb-3d-y1V" secondAttribute="trailing" constant="20" id="UZ6-Ld-HKL"/>
+                                                    <constraint firstItem="4i7-x3-C9Q" firstAttribute="centerY" secondItem="fZj-Kz-1Wi" secondAttribute="centerY" id="WLE-eU-RGs"/>
+                                                    <constraint firstItem="lrb-3d-y1V" firstAttribute="centerY" secondItem="fZj-Kz-1Wi" secondAttribute="centerY" id="Ws4-NT-GLD"/>
+                                                    <constraint firstItem="lrb-3d-y1V" firstAttribute="leading" secondItem="4i7-x3-C9Q" secondAttribute="trailing" constant="14" id="juC-0e-ALN"/>
+                                                    <constraint firstItem="4i7-x3-C9Q" firstAttribute="leading" secondItem="fZj-Kz-1Wi" secondAttribute="leading" constant="20" id="nnM-X3-wip"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username already taken" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ofJ-t5-RVM">
+                                                <rect key="frame" x="0.0" y="92" width="366" height="20"/>
+                                                <fontDescription key="fontDescription" name="SatoshiVariable-Bold_Regular" family="Satoshi Variable" pointSize="16"/>
+                                                <color key="textColor" systemColor="systemRedColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tYA-b7-yn1">
+                                <rect key="frame" x="24" y="776" width="366" height="56"/>
+                                <color key="backgroundColor" red="0.066666666669999999" green="0.094117647060000004" blue="0.1529411765" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="nwp-DE-rpf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SatoshiVariable-Bold_Bold" family="Satoshi Variable" pointSize="18"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Confirm"/>
+                                <connections>
+                                    <action selector="confirmAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="aP5-99-rQ9"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="avq-jU-ydk" firstAttribute="leading" secondItem="dOw-YB-yoz" secondAttribute="leading" id="3bB-eI-gbH"/>
+                            <constraint firstItem="CMN-Ci-AqJ" firstAttribute="top" secondItem="dOw-YB-yoz" secondAttribute="bottom" constant="12" id="91A-0Z-Oxv"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="tYA-b7-yn1" secondAttribute="bottom" constant="30" id="CMg-p4-sjH"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="dOw-YB-yoz" secondAttribute="trailing" constant="24" id="DcA-Wt-EGa"/>
+                            <constraint firstItem="avq-jU-ydk" firstAttribute="trailing" secondItem="dOw-YB-yoz" secondAttribute="trailing" id="Ig3-Dg-BpT"/>
+                            <constraint firstItem="dOw-YB-yoz" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="40" id="K3r-IC-oXn"/>
+                            <constraint firstItem="CMN-Ci-AqJ" firstAttribute="leading" secondItem="dOw-YB-yoz" secondAttribute="leading" id="TGy-T0-Hq1"/>
+                            <constraint firstItem="avq-jU-ydk" firstAttribute="top" secondItem="CMN-Ci-AqJ" secondAttribute="bottom" constant="32" id="ZB4-yt-V2L"/>
+                            <constraint firstItem="tYA-b7-yn1" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="gAJ-zo-cd6"/>
+                            <constraint firstItem="dOw-YB-yoz" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" constant="24" id="gVb-bh-UG9"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="tYA-b7-yn1" secondAttribute="trailing" constant="24" id="kTE-Jc-eU9"/>
+                            <constraint firstItem="CMN-Ci-AqJ" firstAttribute="trailing" secondItem="dOw-YB-yoz" secondAttribute="trailing" id="pEY-aU-iv4"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="confirmBtn" destination="tYA-b7-yn1" id="Ne9-hp-8hk"/>
+                        <outlet property="errorLabel" destination="ofJ-t5-RVM" id="TcH-tr-aod"/>
+                        <outlet property="userNameContainer" destination="fZj-Kz-1Wi" id="jC7-ix-zVQ"/>
+                        <outlet property="userNameField" destination="lrb-3d-y1V" id="M3Y-Je-ngY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="20" y="82"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

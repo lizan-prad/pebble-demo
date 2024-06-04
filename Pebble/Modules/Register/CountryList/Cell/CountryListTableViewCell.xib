@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Satoshi-Variable.ttf">
+            <string>SatoshiVariable-Bold_Bold</string>
+            <string>SatoshiVariable-Bold_Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="CountryListTableViewCell" rowHeight="77" id="smq-WE-Bqi" customClass="CountryListTableViewCell" customModule="Pebble" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="368" height="87"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="smq-WE-Bqi" id="Ecf-CX-JLy">
+                <rect key="frame" x="0.0" y="0.0" width="368" height="87"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1H8-aK-gxP">
+                        <rect key="frame" x="24" y="5" width="320" height="77"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="pdo-tp-iGl">
+                                <rect key="frame" x="64" y="28.5" width="79.5" height="20"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UAE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WFS-nD-ASR">
+                                        <rect key="frame" x="0.0" y="0.0" width="32" height="20"/>
+                                        <fontDescription key="fontDescription" name="SatoshiVariable-Bold_Bold" family="Satoshi Variable" pointSize="16"/>
+                                        <color key="textColor" red="0.1137254902" green="0.1137254902" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(+971)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="49v-WY-Nwl">
+                                        <rect key="frame" x="36" y="0.0" width="43.5" height="20"/>
+                                        <fontDescription key="fontDescription" name="SatoshiVariable-Bold_Medium" family="Satoshi Variable" pointSize="16"/>
+                                        <color key="textColor" red="0.50588235290000005" green="0.50588235290000005" blue="0.50588235290000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tick" translatesAutoresizingMaskIntoConstraints="NO" id="qZq-KA-zXw">
+                                <rect key="frame" x="279" y="26" width="25" height="25"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="qGG-CE-bHY"/>
+                                    <constraint firstAttribute="height" constant="25" id="xcU-W5-mjU"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bmo-5C-rsO">
+                                <rect key="frame" x="16" y="18.5" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Mxn-kB-Uuo"/>
+                                    <constraint firstAttribute="width" constant="40" id="hHG-qC-jIF"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="qZq-KA-zXw" firstAttribute="centerY" secondItem="1H8-aK-gxP" secondAttribute="centerY" id="LM7-AZ-4VF"/>
+                            <constraint firstAttribute="trailing" secondItem="qZq-KA-zXw" secondAttribute="trailing" constant="16" id="QaE-Et-T3M"/>
+                            <constraint firstItem="pdo-tp-iGl" firstAttribute="leading" secondItem="bmo-5C-rsO" secondAttribute="trailing" constant="8" id="RW7-aZ-s1E"/>
+                            <constraint firstItem="bmo-5C-rsO" firstAttribute="leading" secondItem="1H8-aK-gxP" secondAttribute="leading" constant="16" id="Sbn-uK-IEj"/>
+                            <constraint firstItem="pdo-tp-iGl" firstAttribute="centerY" secondItem="bmo-5C-rsO" secondAttribute="centerY" id="WAa-a7-soi"/>
+                            <constraint firstItem="bmo-5C-rsO" firstAttribute="centerY" secondItem="1H8-aK-gxP" secondAttribute="centerY" id="arR-t6-p7f"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="1H8-aK-gxP" firstAttribute="leading" secondItem="Ecf-CX-JLy" secondAttribute="leading" constant="24" id="ap4-nF-xYh"/>
+                    <constraint firstItem="1H8-aK-gxP" firstAttribute="top" secondItem="Ecf-CX-JLy" secondAttribute="top" constant="5" id="hx7-PF-hnB"/>
+                    <constraint firstAttribute="bottom" secondItem="1H8-aK-gxP" secondAttribute="bottom" constant="5" id="lfH-Sm-sys"/>
+                    <constraint firstAttribute="trailing" secondItem="1H8-aK-gxP" secondAttribute="trailing" constant="24" id="pXl-cI-ton"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="V5D-e8-Yf0"/>
+            <connections>
+                <outlet property="checkMark" destination="qZq-KA-zXw" id="SVD-cA-Noj"/>
+                <outlet property="container" destination="1H8-aK-gxP" id="ihB-rb-Gcs"/>
+                <outlet property="countryFlag" destination="bmo-5C-rsO" id="xtB-ih-R6I"/>
+                <outlet property="countryName" destination="WFS-nD-ASR" id="dde-0V-ssh"/>
+                <outlet property="countryPhone" destination="49v-WY-Nwl" id="66H-BG-R6K"/>
+                <outlet property="countrySymbol" destination="49v-WY-Nwl" id="BX1-st-PeG"/>
+            </connections>
+            <point key="canvasLocation" x="239.13043478260872" y="118.86160714285714"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="tick" width="21" height="21"/>
+    </resources>
+</document>
